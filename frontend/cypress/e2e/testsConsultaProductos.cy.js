@@ -1,3 +1,5 @@
+const loginPage = require("./pages/login.Page")
+
 // En primer lugar, procederemos a definir las variables base que estaremos utilizando en nuestro set de pruebas.
 const baseUrl = "https://test-adl.leonardojose.dev/";
 const testingEmail = "testeradl@test.com";
@@ -7,14 +9,8 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
     // Lo primero que haremos, será establecer un Hook Iterativo base que realice un patrón antes de cada prueba, en este caso, el inicio de sesión.
     beforeEach(() => {
         cy.viewport(1920, 1080);
-        cy.visit(baseUrl); // Accedemos al sitio
-        cy.get("#root > div > div > div > img").should("be.visible"); // Validamos que haya cargado el DOM verificando que esté visible un elemento del HTML que debiera estar visible como prioridad al cargar la página.
-        cy.get("#email").type(testingEmail); // Obtenemos campo de entrada y escribimos el correo.
-        cy.get("#password").type(testingPassword); // Obtenemos campo de entrada y escribimos la contraseña.
-        cy.get("#root > div > div > form > div:nth-child(4) > button").click(); // Damos click al botón de Ingresar
-        
-        cy.get("#root > div > div > main > div > p")
-            .should("contain", "Bienvenido al sistema ERP."); // Validación de nuestro procedimiento de Inicio de Sesión.
+        cy.visit(baseUrl);
+        loginPage.login(testingEmail, testingPassword);
     });
 
     it("Inicio de sesión y consulta de productos", () => {
@@ -23,7 +19,7 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
         cy.get("#root > div > div > main > div > div.sm\\:flex.sm\\:items-center > div.sm\\:flex-auto > h1").should("contain", "Listado de Artículos"); // Validación intermedia, acceso a la vista de Artículos.
 
         // Y establecemos las condiciones para la validación final
-        cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr:nth-child(1) > td:nth-child(1)")
+        cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(2)")
             .should("be.visible")
             .and(($el) => {
                 expect($el.text().trim()).to.not.be.empty
