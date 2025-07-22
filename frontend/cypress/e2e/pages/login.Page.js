@@ -30,6 +30,9 @@ class Login {
         this.typeEmail(email);
         this.typePassword(password);
         this.clickLogin();
+    }
+
+    validateAccessToHomePage(){
         this.checkValidation();
     }
 }
