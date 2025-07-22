@@ -3,7 +3,7 @@ class articlesList {
         // Prueba de acceso + validación
         sidebarEntitiesButton: () => cy.get("#root > div > aside > nav > ul > li:nth-child(2) > div > div"),
         sidebarArticlesListAccessButton: () => cy.get("#root > div > aside > nav > ul > li:nth-child(2) > div > ul > li:nth-child(3) > a"),
-        articlesListViewTitle: () => cy.get("#root > div > div > main > div > div.sm\:flex.sm\:items-center > div.sm\:flex-auto > h1"),
+        articlesListViewTitle: () => cy.get("#root > div > div > main > div > div.sm\\:flex.sm\\:items-center > div.sm\\:flex-auto > h1"),
 
         // Validación de contenido de la lista de artículos
         articlesListFirstElementSKUCode: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(1)"),
