@@ -80,3 +80,5 @@ class articlesList {
             .should("be.visible");
     }
 }
+
+module.exports = new articlesList();
