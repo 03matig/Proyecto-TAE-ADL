@@ -6,12 +6,12 @@ class articlesList {
         articlesListViewTitle: () => cy.get("#root > div > div > main > div > div.sm\:flex.sm\:items-center > div.sm\:flex-auto > h1"),
 
         // Validación de contenido de la lista de artículos
-        articlesListFirstElementSKUCode: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\:block > div > table > tbody > tr > td:nth-child(1)"),
+        articlesListFirstElementSKUCode: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(1)"),
         articlesListFirstElementDescription: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(2)"),
-        articlesListFirstElementStockQuantity: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\:block > div > table > tbody > tr > td:nth-child(3)"),
-        articlesListFirstElementBuyingCost: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\:block > div > table > tbody > tr > td:nth-child(4)"),
-        articlesListFirstElementSaleCost: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\:block > div > table > tbody > tr > td:nth-child(5)"),
-        articlesListFirstElementMeasureUnit: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\:block > div > table > tbody > tr > td:nth-child(6)"),
+        articlesListFirstElementStockQuantity: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(3)"),
+        articlesListFirstElementBuyingCost: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(4)"),
+        articlesListFirstElementSaleCost: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(5)"),
+        articlesListFirstElementMeasureUnit: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td:nth-child(6)"),
       
         // Validación de contenido para las acciones por cada artículo
         articlesListEditFirstArticleButton: () => cy.get("#root > div > div > main > div > div.mt-6 > div.hidden.lg\\:block > div > table > tbody > tr > td.relative.py-4.pl-3.pr-4.text-sm.font-medium.text-right.whitespace-nowrap.sm\\:pr-6 > button.text-indigo-600.hover\\:text-indigo-900"),
