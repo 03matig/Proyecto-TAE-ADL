@@ -51,10 +51,10 @@ class articlesEdit {
         this.elements.saveChangesButton().click();
     }
 
-    validateArticleEdited(description) {
+    validateArticleEdited() {
         this.elements.articleEditedValidationText()
             .should("be.visible")
-            .and("contain", `Artículo ${description} editado correctamente`);
+            .and("contain", "actualizado con éxito!");
     }
 }
 

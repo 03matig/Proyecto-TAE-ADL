@@ -112,5 +112,7 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
                 expect(after).to.not.eq(before);
             });
         });
+
+        articlesEditPage.validateArticleEdited();
     });
 });
