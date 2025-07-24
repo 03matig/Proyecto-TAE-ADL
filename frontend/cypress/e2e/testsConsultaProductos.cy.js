@@ -1,10 +1,11 @@
+// En primer lugar, procederemos a importar el modelado de objetos en base a las vistas de la página (POM) que estaremos testeando.
 const loginPage = require("./pages/login.Page")
 const articlesListPage = require("./pages/articlesList.Page");
 
-// En primer lugar, procederemos a definir las variables base que estaremos utilizando en nuestro set de pruebas.
-const baseUrl = "https://test-adl.leonardojose.dev/";
-const testingEmail = "testeradl@test.com";
-const testingPassword = "Tester@2025";
+// En segundo lugar, procederemos a definir las variables base por medio de variables de entorno que estaremos utilizando en nuestro set de pruebas.
+const baseUrl = Cypress.env("baseUrl");
+const testingEmail = Cypress.env("testingEmail");
+const testingPassword = Cypress.env("testingPassword");
 
 describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", () => {
     // Lo primero que haremos, será establecer un Hook Iterativo base que realice un patrón antes de cada prueba, en este caso, el inicio de sesión.
@@ -15,7 +16,7 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
         loginPage.validateAccessToHomePage();
     });
 
-    it("Inicio de sesión y consulta de productos", () => {
+    it("Login and access articles list", () => {
         // Accedemos a la vista de la página donde se listan los artículos.
         articlesListPage.accessArticlesList();
 

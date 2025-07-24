@@ -1,0 +1,26 @@
+[
+    {
+        "sku": "IP-16-6",
+        "description": "iPhone 16 128gb negro - Marca Apple",
+        "stock": 15,
+        "buyingCost": 549990,
+        "salePrice": 849990,
+        "measureUnit": "unit"
+    },
+    {
+        "sku": "IP-16-PM-5",
+        "description": "iPhone 16 Pro Max 256gb - Titanio negro + lámina - Marca Apple",
+        "stock": 10,
+        "buyingCost": 789990,
+        "salePrice": 1209990,
+        "measureUnit": "box"
+    },
+    {
+        "sku": "IP-16e-5",
+        "description": "iPhone 16e 128gb negro - Marca Apple",
+        "stock": 25,
+        "buyingCost": 459990,
+        "salePrice": 659990,
+        "measureUnit": "kg"
+    }
+]
