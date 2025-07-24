@@ -125,6 +125,16 @@ class articlesList {
     clickEditFirstArticleButton() {
         this.elements.articlesListEditFirstArticleButton().click();
     }
+
+    clickDeleteFirstArticleButton() {
+        this.elements.articlesListDeleteFirstArticleButton().click();
+    }
+
+    validateDeletionFirstArticle() {
+        cy.get("#root > section > div > div")
+            .should("be.visible")
+            .and("contain", "Artículo eliminado con éxito");
+    }
 }
 
 module.exports = new articlesList();
