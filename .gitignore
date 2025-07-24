@@ -139,4 +139,4 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-frontend/cypress/cypress.env.json
+frontend/cypress.env.json
