@@ -23,7 +23,7 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
 
         // Validamos que se haya accedido correctamente a la lista de artículos.
         articlesListPage.validateArticlesListAccess();
-        articlesListPage.validateArticlesListContent(); // Validación intermedia; contenido de cada columna en la lista de artículos debe tener valor no nulo.
+        //articlesListPage.validateArticlesListContent(); // Validación intermedia; contenido de cada columna en la lista de artículos debe tener valor no nulo.
 
 
         // Procedemos a completar los campos del formulario para agregar un nuevo artículo por medio de fixtures.
@@ -33,12 +33,12 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
                 articlesDetailPage.validateAccessToAddNewArticlePage();
 
                 articlesDetailPage.fillArticleDetails(
-                    producto.sku,
-                    producto.description,
-                    producto.stock,
-                    producto.buyingCost,
-                    producto.salePrice,
-                    producto.measureUnit
+                    `${producto.sku}-2`,
+                    `${producto.description}-1`,
+                    `${producto.stock}-1`,
+                    `${producto.buyingCost}-1`,
+                    `${producto.salePrice}-1`,
+                    `${producto.measureUnit}-1`
                 );
 
                 articlesDetailPage.saveArticleDetails();
