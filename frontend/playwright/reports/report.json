@@ -1,5 +1,163 @@
 [
   {
+    "description": "  Como usuario registrado,\n  Quiero poder acceder al sistema\n  Para registrar un nuevo producto con nombre \"Iphone 16\" y sus datos complementarios",
+    "elements": [
+      {
+        "description": "",
+        "id": "registrar-nuevo-producto;agregar-un-nuevo-producto-con-datos-válidos",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Agregar un nuevo producto con datos válidos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 167231000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "que el usuario accede al sistema correctamente",
+            "match": {
+              "location": "step_definitions\\addNewProduct_steps.js:8"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 512799,
+              "error_message": "TypeError: this.launchBrowser is not a function\n    at CustomWorld.<anonymous> (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\step_definitions\\addNewProduct_steps.js:9:44)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "accede a la página de artículos",
+            "match": {
+              "location": "step_definitions\\addNewProduct_steps.js:19"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "inicia el registro de un nuevo artículo",
+            "match": {
+              "location": "step_definitions\\addNewProduct_steps.js:25"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "sku",
+                      "IP-16-6"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "nombre",
+                      "Iphone 16"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "stock",
+                      "50"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "costo",
+                      "800"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "precio",
+                      "1200"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "unidad",
+                      "Unidad"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 11,
+            "name": "completa los datos del artículo:",
+            "match": {
+              "location": "step_definitions\\addNewProduct_steps.js:30"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "guarda el artículo",
+            "match": {
+              "location": "step_definitions\\addNewProduct_steps.js:42"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "el artículo \"Iphone 16\" debe aparecer en el listado o en la confirmación",
+            "match": {
+              "location": "step_definitions\\addNewProduct_steps.js:46"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 49864100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "registrar-nuevo-producto",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Registrar nuevo producto",
+    "tags": [],
+    "uri": "features\\addNewProduct.feature"
+  },
+  {
     "description": "",
     "elements": [
       {
@@ -14,7 +172,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2101082099
+              "duration": 152558499
             }
           },
           {
@@ -27,7 +185,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15493372599
+              "duration": 9596340500
             }
           },
           {
@@ -40,7 +198,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 149713999
+              "duration": 84028900
             }
           },
           {
@@ -53,7 +211,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 26603299
+              "duration": 16408699
             }
           },
           {
@@ -66,7 +224,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1005664699
+              "duration": 960750000
             }
           },
           {
@@ -74,7 +232,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 113788599
+              "duration": 46810900
             }
           }
         ],

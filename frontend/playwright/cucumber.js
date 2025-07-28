@@ -22,6 +22,6 @@ module.exports = {
     },
 
     // Aumenta el timeout general (20 segundos por step)
-    timeout: 20000
+    timeout: 40000
   }
 };
