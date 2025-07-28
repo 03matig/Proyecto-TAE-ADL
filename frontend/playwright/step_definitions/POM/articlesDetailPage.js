@@ -4,7 +4,7 @@ class ArticlesDetailPage {
     constructor(page) {
         this.page = page;
         this.selectors = {
-            addNewArticleBtn: '#root > div > div > main > div > div.sm\\:flex.sm\\:items-center > div.mt-4.sm\\:mt-0.sm\\:ml-16.sm\\:flex-none > button',
+            addNewArticleBtn: '#root > div > div > main > div > div.sm\\:flex.sm\\:items-center > div.mt-4.sm\\:mt-0.sm\\:ml-16.sm\\:flex-none > button:has-text("Crear Artículo")',
             skuInput: '#sku',
             descriptionInput: '#name',
             stockInput: '#stock_quantity',

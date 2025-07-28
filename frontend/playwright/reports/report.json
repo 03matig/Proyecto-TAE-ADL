@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 527696200
+              "duration": 178721700
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 669989000
+              "duration": 151832099
             }
           },
           {
@@ -35,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10067476000
+              "duration": 11544429099
             }
           },
           {
@@ -48,7 +48,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 306334600
+              "duration": 93203300
             }
           },
           {
@@ -61,8 +61,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 10016791900,
-              "error_message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#root > div > div > main > div > div.sm\\\\:flex.sm\\\\:items-center > div.mt-4.sm\\\\:mt-0.sm\\\\:ml-16.sm\\\\:flex-none > button')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#root > div > div > main > div > div.sm\\\\:flex.sm\\\\:items-center > div.mt-4.sm\\\\:mt-0.sm\\\\:ml-16.sm\\\\:flex-none > button')\u001b[22m\n\n    at Proxy.<anonymous> (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\node_modules\\playwright\\lib\\matchers\\expect.js:221:24)\n    at ArticlesDetailPage.accessAddNewArticlePage (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\step_definitions\\POM\\articlesDetailPage.js:21:74)\n    at CustomWorld.<anonymous> (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\step_definitions\\addNewProduct_steps.js:25:35)"
+              "duration": 20009472399,
+              "error_message": "Error: function timed out, ensure the promise resolves within 20000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)"
             }
           },
           {
@@ -150,7 +150,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 281163999
+              "duration": 55579799
             }
           },
           {
@@ -158,7 +158,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2064500
+              "duration": 1249400
             }
           }
         ],
@@ -188,7 +188,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 452861600
+              "duration": 157271699
             }
           },
           {
@@ -196,7 +196,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 497360499
+              "duration": 151025200
             }
           },
           {
@@ -209,7 +209,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11072581999
+              "duration": 11225215499
             }
           },
           {
@@ -222,7 +222,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 334958800
+              "duration": 85861799
             }
           },
           {
@@ -235,7 +235,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11078900
+              "duration": 12988400
             }
           },
           {
@@ -248,7 +248,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 969600800
+              "duration": 950918200
             }
           },
           {
@@ -256,7 +256,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 262996200
+              "duration": 49873899
             }
           },
           {
@@ -264,7 +264,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 701599
+              "duration": 659599
             }
           }
         ],
