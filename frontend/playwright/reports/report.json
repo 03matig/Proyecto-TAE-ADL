@@ -1,0 +1,92 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "consulta-de-productos;acceso-exitoso-y-visualización-de-listado-de-artículos",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Acceso exitoso y visualización de listado de artículos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2101082099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que el usuario ha iniciado sesión con correo \"testeradl@test.com\" y contraseña \"Tester@2025\"",
+            "match": {
+              "location": "step_definitions\\checkProducts_steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15493372599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "accede a la vista de lista de artículos",
+            "match": {
+              "location": "step_definitions\\checkProducts_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149713999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "debe visualizar el título \"Listado de Artículos\"",
+            "match": {
+              "location": "step_definitions\\checkProducts_steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26603299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "debe visualizar correctamente la información del primer artículo en la tabla",
+            "match": {
+              "location": "step_definitions\\checkProducts_steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1005664699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 113788599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "consulta-de-productos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Consulta de productos",
+    "tags": [],
+    "uri": "features\\checkProducts.feature"
+  }
+]
