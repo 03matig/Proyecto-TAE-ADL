@@ -18,11 +18,9 @@ class ArticlesDetailPage {
 
     async accessAddNewArticlePage() {
         // Aseguramos de que el botón esté disponible, y esperamos a que sea visible por 10 segundos antes de hacer clic
-        await expect(this.page.locator(this.selectors.addNewArticleBtn)).toBeVisible({ timeout: 10000 });  
-        // Forzar scroll horizontal hasta que el botón esté visible
-        await this.page.locator(this.selectors.addNewArticleBtn).scrollIntoViewIfNeeded(); // Esto ya incluye scroll horizontal si es necesario
+        await expect(this.page.locator(this.selectors.addNewArticleBtn)).toBeVisible({ timeout: 10000 }); 
         // Espera explícita
-        await this.page.locator(this.selectors.addNewArticleBtn).click();                       // Click seguro
+        await this.page.locator(this.selectors.addNewArticleBtn).click(); // Click seguro
     }
 
 
