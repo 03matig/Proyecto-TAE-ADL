@@ -7,8 +7,10 @@ class CustomWorld {
     this.parameters = parameters;
   }
   async init() {
-    this.browser = await chromium.launch();
-    this.context = await this.browser.newContext();
+    this.browser = await chromium.launch({headless: false, slowMo: 100});
+    this.context = await this.browser.newContext({
+      viewport: { width: 1920, height: 1080 }
+    });
     this.page = await this.context.newPage();
   }
 

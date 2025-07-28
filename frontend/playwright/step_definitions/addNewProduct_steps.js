@@ -1,35 +1,34 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { Given, When, Then, Before, After } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
+const LoginPage = require('./POM/LoginPage');
+const ArticlesListPage = require('./POM/articlesListPage');
 const ArticlesDetailPage = require('./POM/articlesDetailPage');
 
-let page, context, browser;
-let articlesDetailPage;
-
-Given('que el usuario accede al sistema correctamente', async function () {
-  ({ browser, context, page } = await this.launchBrowser());
-  await page.goto('http://localhost:3000/login'); // ajusta si es otra URL
-
-  await page.getByLabel('Email').fill('usuario@ejemplo.com');
-  await page.getByLabel('Contraseña').fill('contrasena123');
-  await page.getByRole('button', { name: 'Iniciar Sesión' }).click();
-
-  await expect(page.getByText('Dashboard')).toBeVisible({ timeout: 10000 });
+// Inicializar los Page Objects después de que el navegador esté listo
+Before(async function () {
+    await this.init(); // viene del world.js
+    this.loginPage = new LoginPage(this.page);
+    this.articlesListPage = new ArticlesListPage(this.page);
+    this.articlesDetailPage = new ArticlesDetailPage(this.page);
 });
 
-When('accede a la página de artículos', async function () {
-  await page.getByRole('link', { name: 'Artículos' }).click();
-  await expect(page.getByRole('heading', { name: 'Crear Nuevo Artículo' })).toBeVisible();
-  articlesDetailPage = new ArticlesDetailPage(page);
+// Cerrar el navegador al final del escenario
+After(async function () {
+    await this.close();
 });
 
-When('inicia el registro de un nuevo artículo', async function () {
-  await articlesDetailPage.accessAddNewArticlePage();
-  await articlesDetailPage.validateAccessToAddNewArticlePage();
+When('accede a la página de artículos', {timeout: 20000}, async function () {
+    await this.articlesListPage.accessArticlesList();
 });
 
-When('completa los datos del artículo:', async function (dataTable) {
+When('inicia el registro de un nuevo artículo', {timeout: 20000}, async function () {
+    await this.articlesDetailPage.accessAddNewArticlePage();
+    await this.articlesDetailPage.validateAccessToAddNewArticlePage();
+});
+
+When('completa los datos del artículo:', {timeout: 20000}, async function (dataTable) {
   const data = dataTable.rowsHash();
-  await articlesDetailPage.fillArticleDetails(
+  await this.articlesDetailPage.fillArticleDetails(
     data.sku,
     data.nombre,
     parseInt(data.stock),
@@ -39,11 +38,10 @@ When('completa los datos del artículo:', async function (dataTable) {
   );
 });
 
-When('guarda el artículo', async function () {
-  await articlesDetailPage.saveArticleDetails();
+When('guarda el artículo', {timeout: 20000}, async function () {
+  await this.articlesDetailPage.saveArticleDetails();
 });
 
-Then('el artículo {string} debe aparecer en el listado o en la confirmación', async function (nombre) {
-  await articlesDetailPage.validateNewArticleAdded(nombre);
-  await browser.close(); // Cleanup
+Then('el artículo {string} debe aparecer en el listado o en la confirmación', {timeout:20000}, async function (nombre) {
+  await this.articlesDetailPage.validateNewArticleAdded(nombre);
 });

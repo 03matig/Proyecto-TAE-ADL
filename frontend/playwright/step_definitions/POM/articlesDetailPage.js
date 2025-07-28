@@ -4,7 +4,7 @@ class ArticlesDetailPage {
     constructor(page) {
         this.page = page;
         this.selectors = {
-            addNewArticleBtn: 'button:has-text("Crear artículo")',
+            addNewArticleBtn: '#root > div > div > main > div > div.sm\\:flex.sm\\:items-center > div.mt-4.sm\\:mt-0.sm\\:ml-16.sm\\:flex-none > button',
             skuInput: '#sku',
             descriptionInput: '#name',
             stockInput: '#stock_quantity',
@@ -17,9 +17,12 @@ class ArticlesDetailPage {
     }
 
     async accessAddNewArticlePage() {
-        const addBtn = this.page.locator(this.selectors.addNewArticleBtn);
-        await expect(addBtn).toBeVisible();         // Espera explícita
-        await addBtn.click();                       // Click seguro
+        // Aseguramos de que el botón esté disponible, y esperamos a que sea visible por 10 segundos antes de hacer clic
+        await expect(this.page.locator(this.selectors.addNewArticleBtn)).toBeVisible({ timeout: 10000 });  
+        // Forzar scroll horizontal hasta que el botón esté visible
+        await this.page.locator(this.selectors.addNewArticleBtn).scrollIntoViewIfNeeded(); // Esto ya incluye scroll horizontal si es necesario
+        // Espera explícita
+        await this.page.locator(this.selectors.addNewArticleBtn).click();                       // Click seguro
     }
 
 

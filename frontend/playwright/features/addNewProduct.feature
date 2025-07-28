@@ -5,7 +5,7 @@ Feature: Registrar nuevo producto
   Para registrar un nuevo producto con nombre "Iphone 16" y sus datos complementarios
 
   Scenario: Agregar un nuevo producto con datos válidos
-    Given que el usuario accede al sistema correctamente
+    Given que el usuario ha iniciado sesión con correo "testeradl@test.com" y contraseña "Tester@2025"
     When accede a la página de artículos
     And inicia el registro de un nuevo artículo
     And completa los datos del artículo:

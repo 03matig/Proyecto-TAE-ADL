@@ -14,21 +14,28 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 167231000
+              "duration": 527696200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 669989000
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "que el usuario accede al sistema correctamente",
+            "name": "que el usuario ha iniciado sesión con correo \"testeradl@test.com\" y contraseña \"Tester@2025\"",
             "match": {
-              "location": "step_definitions\\addNewProduct_steps.js:8"
+              "location": "step_definitions\\common_steps.js:5"
             },
             "result": {
-              "status": "failed",
-              "duration": 512799,
-              "error_message": "TypeError: this.launchBrowser is not a function\n    at CustomWorld.<anonymous> (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\step_definitions\\addNewProduct_steps.js:9:44)"
+              "status": "passed",
+              "duration": 10067476000
             }
           },
           {
@@ -37,11 +44,11 @@
             "line": 9,
             "name": "accede a la página de artículos",
             "match": {
-              "location": "step_definitions\\addNewProduct_steps.js:19"
+              "location": "step_definitions\\addNewProduct_steps.js:20"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 306334600
             }
           },
           {
@@ -50,11 +57,12 @@
             "line": 10,
             "name": "inicia el registro de un nuevo artículo",
             "match": {
-              "location": "step_definitions\\addNewProduct_steps.js:25"
+              "location": "step_definitions\\addNewProduct_steps.js:24"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "failed",
+              "duration": 10016791900,
+              "error_message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#root > div > div > main > div > div.sm\\\\:flex.sm\\\\:items-center > div.mt-4.sm\\\\:mt-0.sm\\\\:ml-16.sm\\\\:flex-none > button')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#root > div > div > main > div > div.sm\\\\:flex.sm\\\\:items-center > div.mt-4.sm\\\\:mt-0.sm\\\\:ml-16.sm\\\\:flex-none > button')\u001b[22m\n\n    at Proxy.<anonymous> (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\node_modules\\playwright\\lib\\matchers\\expect.js:221:24)\n    at ArticlesDetailPage.accessAddNewArticlePage (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\step_definitions\\POM\\articlesDetailPage.js:21:74)\n    at CustomWorld.<anonymous> (C:\\Users\\mgari\\Documents\\Curso-ATL-AutomationTestEngineer\\Proyecto-TAE-ADL\\frontend\\playwright\\step_definitions\\addNewProduct_steps.js:25:35)"
             }
           },
           {
@@ -104,7 +112,7 @@
             "line": 11,
             "name": "completa los datos del artículo:",
             "match": {
-              "location": "step_definitions\\addNewProduct_steps.js:30"
+              "location": "step_definitions\\addNewProduct_steps.js:29"
             },
             "result": {
               "status": "skipped",
@@ -117,7 +125,7 @@
             "line": 18,
             "name": "guarda el artículo",
             "match": {
-              "location": "step_definitions\\addNewProduct_steps.js:42"
+              "location": "step_definitions\\addNewProduct_steps.js:41"
             },
             "result": {
               "status": "skipped",
@@ -130,7 +138,7 @@
             "line": 19,
             "name": "el artículo \"Iphone 16\" debe aparecer en el listado o en la confirmación",
             "match": {
-              "location": "step_definitions\\addNewProduct_steps.js:46"
+              "location": "step_definitions\\addNewProduct_steps.js:45"
             },
             "result": {
               "status": "skipped",
@@ -142,7 +150,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49864100
+              "duration": 281163999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2064500
             }
           }
         ],
@@ -172,7 +188,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 152558499
+              "duration": 452861600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 497360499
             }
           },
           {
@@ -181,11 +205,11 @@
             "line": 4,
             "name": "que el usuario ha iniciado sesión con correo \"testeradl@test.com\" y contraseña \"Tester@2025\"",
             "match": {
-              "location": "step_definitions\\checkProducts_steps.js:18"
+              "location": "step_definitions\\common_steps.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 9596340500
+              "duration": 11072581999
             }
           },
           {
@@ -194,11 +218,11 @@
             "line": 5,
             "name": "accede a la vista de lista de artículos",
             "match": {
-              "location": "step_definitions\\checkProducts_steps.js:25"
+              "location": "step_definitions\\checkProducts_steps.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 84028900
+              "duration": 334958800
             }
           },
           {
@@ -207,11 +231,11 @@
             "line": 6,
             "name": "debe visualizar el título \"Listado de Artículos\"",
             "match": {
-              "location": "step_definitions\\checkProducts_steps.js:29"
+              "location": "step_definitions\\checkProducts_steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 16408699
+              "duration": 11078900
             }
           },
           {
@@ -220,11 +244,11 @@
             "line": 7,
             "name": "debe visualizar correctamente la información del primer artículo en la tabla",
             "match": {
-              "location": "step_definitions\\checkProducts_steps.js:35"
+              "location": "step_definitions\\checkProducts_steps.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 960750000
+              "duration": 969600800
             }
           },
           {
@@ -232,7 +256,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46810900
+              "duration": 262996200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 701599
             }
           }
         ],

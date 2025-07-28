@@ -15,23 +15,16 @@ After(async function () {
     await this.close();
 });
 
-Given('que el usuario ha iniciado sesión con correo {string} y contraseña {string}', { timeout: 20000 }, async function (email, password) {
-    const baseUrl = this.parameters.baseUrl || 'https://test-adl.leonardojose.dev/';
-    await this.page.goto(baseUrl);
-    await this.loginPage.login(email, password);
-    await this.loginPage.validateAccessToHomePage();
-});
-
-When('accede a la vista de lista de artículos', async function () {
+When('accede a la vista de lista de artículos', {timeout: 20000}, async function () {
     await this.articlesListPage.accessArticlesList();
 });
 
-Then('debe visualizar el título {string}', async function (titulo) {
+Then('debe visualizar el título {string}', {timeout: 20000}, async function (titulo) {
     const title = this.page.locator(this.articlesListPage.selectors.articlesListViewTitle);
     await expect(title).toBeVisible();
     await expect(title).toHaveText(titulo);
 });
 
-Then('debe visualizar correctamente la información del primer artículo en la tabla', async function () {
+Then('debe visualizar correctamente la información del primer artículo en la tabla', {timeout: 20000}, async function () {
     await this.articlesListPage.validateArticlesListContent();
 });
