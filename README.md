@@ -1,4 +1,5 @@
 # Proyecto-TAE-ADL
+### Miembros: Sebastián Celis, Maribella Moreno, Matías Garín.
 Proyecto Final: Bootcamp "Test Automation Engineer" - Desafío Academia LATAM.
 Para la revisión del proyecto revisar ramas
 --> feat/backend
