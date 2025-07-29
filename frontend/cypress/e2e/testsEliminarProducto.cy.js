@@ -17,7 +17,7 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
         loginPage.validateAccessToHomePage();
     });
 
-    it("As an authenticated user, you desire to add a new product on stock - Expected state: 200", () => {
+    it("As an authenticated user, you desire to delete an existing product on stock - Expected state: 200", () => {
         // Accedemos a la vista de la página donde se listan los artículos.
         articlesListPage.accessArticlesList();
 
@@ -25,28 +25,10 @@ describe("Set de pruebas 'End to End' (E2E) para Sistema ERP de SELGOM S.A.", ()
         articlesListPage.validateArticlesListAccess();
         articlesListPage.validateArticlesListContent(); // Validación intermedia; contenido de cada columna en la lista de artículos debe tener valor no nulo.
 
-
-        // Procedemos a completar los campos del formulario para agregar un nuevo artículo por medio de fixtures.
-        cy.fixture("ProductosEjemplo").then((productos) => {
-            productos.forEach((producto) => {
-                articlesDetailPage.accessAddNewArticlePage();
-                articlesDetailPage.validateAccessToAddNewArticlePage();
-
-                articlesDetailPage.fillArticleDetails(
-                    `${producto.sku}-2`,
-                    producto.description,
-                    producto.stock,
-                    producto.buyingCost,
-                    producto.salePrice,
-                    producto.measureUnit
-                );
-
-                articlesDetailPage.saveArticleDetails();
-                articlesDetailPage.validateNewArticleAdded(producto.description);
-
-                cy.wait(7000); // Esperamos a que desaparezca el toast
-            });
-        });
+        // Procedemos a eliminar el primer artículo de la lista.
+        articlesListPage.clickDeleteFirstArticleButton();
+        // Validamos que se haya eliminado el artículo con éxito.
+        articlesListPage.validateDeletionFirstArticle();
     });
 });
 
