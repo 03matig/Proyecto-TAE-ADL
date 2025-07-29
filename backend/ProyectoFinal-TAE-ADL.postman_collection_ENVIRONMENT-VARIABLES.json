@@ -34,7 +34,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{pw}}\"\r\n}",
+					"raw": "{\r\n    \"email\": \"{{userEmail}}\",\r\n    \"password\": \"{{userPassword}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -81,7 +81,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"Aloalo\"\r\n}",
+					"raw": "{\r\n    \"email\": \"{{userEmail}}\",\r\n    \"password\": \"Aloalo\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -150,6 +150,45 @@
 			"response": []
 		},
 		{
+			"name": "GeneralClientsQueryUnauthorized",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Query Unauthorized - returns server state 401\", () => {\r",
+							"    pm.response.to.have.status(401);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Query returns message 'No autenticado.'\", () => {\r",
+							"    pm.expect(responseData).to.have.property(\"message\");\r",
+							"    pm.expect(responseData.message).to.be.eql(\"No autenticado.\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/clients",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "VerifyNewClientRegistry",
 			"event": [
 				{
@@ -188,6 +227,54 @@
 						}
 					]
 				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{signUpEmail}}\",\r\n    \"password\": \"{{signUpPW}}\",\r\n    \"name\": \"Matías Garín\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/clients",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewClientRegistrationUnauthorized",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Query Unauthorized - returns server state 401\", () => {\r",
+							"    pm.response.to.have.status(401);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Query returns message 'No autenticado.'\", () => {\r",
+							"    pm.expect(responseData).to.have.property(\"message\");\r",
+							"    pm.expect(responseData.message).to.be.eql(\"No autenticado.\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -271,6 +358,46 @@
 			"response": []
 		},
 		{
+			"name": "UpdateClientInfoUnauthorized",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Query Unauthorized - returns server state 401\", () => {\r",
+							"    pm.response.to.have.status(401);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Query returns message 'No autenticado.'\", () => {\r",
+							"    pm.expect(responseData).to.have.property(\"message\");\r",
+							"    pm.expect(responseData.message).to.be.eql(\"No autenticado.\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/clients/{{id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"clients",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "DeleteClient",
 			"event": [
 				{
@@ -301,6 +428,46 @@
 						}
 					]
 				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/clients/{{id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"clients",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteClientUnauthorized",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Query Unauthorized - returns server state 401\", () => {\r",
+							"    pm.response.to.have.status(401);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Query returns message 'No autenticado.'\", () => {\r",
+							"    pm.expect(responseData).to.have.property(\"message\");\r",
+							"    pm.expect(responseData.message).to.be.eql(\"No autenticado.\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
