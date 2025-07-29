@@ -1,5 +1,12 @@
 # Proyecto-TAE-ADL
 Proyecto Final: Bootcamp "Test Automation Engineer" - Desafío Academia LATAM.
+Para la revisión del proyecto revisar ramas
+--> feat/backend
+--> feat/frontend/cypress
+--> feat/frontend/selenium
+--> feat/frontend/playwright
+
+Para visualizar versiones finales de testing con los distintos frameworks.
 
 ## Branching Model.
 
