@@ -13,13 +13,17 @@ Proyecto Final: Bootcamp "Test Automation Engineer" - Desafío Academia LATAM.
     --> frontend/playwright #version final de Playwright
         --> 5 pruebas
 
-    --> feat/frontend/cypress/check-products
-    --> feat/frontend/selenium/check-products
-    --> feat/frontend/playwright/check-products
+    --> feat/frontend/cypress-checkProducts
+    --> feat/frontend/selenium-checkProducts
+    --> feat/frontend/playwright-checkProducts
 
-    --> feat/frontend/cypress/new-product
-    --> feat/frontend/selenium/new-product
-    --> feat/frontend/playwright/new-product
+    --> feat/frontend/cypress-addNewProduct
+    --> feat/frontend/selenium-addNewProduct
+    --> feat/frontend/playwright-addNewProduct
+
+    --> feat/frontend/cypress/...
+    --> feat/frontend/selenium/...
+    --> feat/frontend/playwright/...
 
     --> feat/frontend/cypress/...
     --> feat/frontend/selenium/...
